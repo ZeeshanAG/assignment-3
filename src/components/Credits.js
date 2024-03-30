@@ -16,12 +16,7 @@ class Credits extends Component {
     };
   }
   
-  componentDidUpdate(prevProps) {
-    if (this.props.accountBalance !== prevProps.accountBalance) {
-      this.setState({ accountBalance: this.props.accountBalance });
-    }
-  }
-  
+
   creditView = () => {
     const listofCredits = this.state.creditList.map((credit, index) => (
       <li style={{ listStylePosition: 'inside' }} key={index}>
