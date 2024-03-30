@@ -11,38 +11,53 @@ class Credits extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      accountBalance: this.props.accountBalance,
-      creditList: this.props.creditList || [], // Initialize with an empty array if creditList is undefined
+      accountBalance: props.accountBalance || 0,
+      creditList: props.creditList || [],
     };
   }
-  
+
+  componentDidUpdate(prevProps) {
+    if (this.props.accountBalance !== prevProps.accountBalance) {
+      this.setState({ accountBalance: this.props.accountBalance });
+    }
+    if (this.props.creditList !== prevProps.creditList) {
+      this.setState({ creditList: this.props.creditList || [] });
+    }
+  }
 
   creditView = () => {
-    const listofCredits = this.state.creditList.map((credit, index) => (
-      <li style={{ listStylePosition: 'inside' }} key={index}>
-        Description: {credit.description} || Amount: ${credit.amount} || Date:{' '}
-        {credit.date.slice(0, 10)}
-      </li>
-    ));
-    return <ul>{listofCredits}</ul>;
+    return (
+      <ul>
+        {this.state.creditList.map((credit, index) => (
+          <li style={{ listStylePosition: 'inside' }} key={index}>
+            Description: {credit.description} || Amount: ${credit.amount} || Date:{' '}
+            {credit.date ? credit.date.slice(0, 10) : ''}
+          </li>
+        ))}
+      </ul>
+    );
   };
 
-  // add credit function
   addCredit = (event) => {
     event.preventDefault();
+    const description = event.target.description.value;
+    const amount = parseFloat(event.target.amount.value);
+    if (isNaN(amount) || amount <= 0) {
+      alert('Please enter a valid positive amount.');
+      return;
+    }
     const newCredit = {
-      description: event.target.description.value,
-      amount: event.target.amount.value,
+      description: description,
+      amount: amount,
       date: new Date().toISOString(),
     };
     const updatedCredits = [...this.state.creditList, newCredit];
-    const newBalance =
-      parseFloat(this.state.accountBalance) + parseFloat(newCredit.amount);
+    const newBalance = parseFloat(this.state.accountBalance) + amount;
     this.setState({
       accountBalance: newBalance.toFixed(2),
       creditList: updatedCredits,
     });
-    event.target.reset(); // Reset the form fields after submission
+    event.target.reset();
   };
 
   render() {
