@@ -32,6 +32,12 @@ class App extends Component {
     this.setState({ accountBalance: newBalance });
   }
 
+  addDebit = (newDebit) => {
+    this.setState((prevState) => ({
+      debitList: [...prevState.debitList, newDebit],
+    }));
+  }
+
   addCredit = (newCredit) => {
     this.setState((prevState) => ({
       creditList: [...prevState.creditList, newCredit],
@@ -54,7 +60,7 @@ class App extends Component {
     )
     const LogInComponent = () => (<LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} />)
     const CreditsComponent = () => (<Credits credits={this.state.creditList} balance={this.state.accountBalance} addCredit={this.addCredit} updateAccBalance={this.updateAccBalance} />)
-    const DebitsComponent = () => (<Debits debits={this.state.debitList} />) 
+    const DebitsComponent = () => (<Debits debits={this.state.debitList} balance={this.state.accountBalance} addDebit={this.addDebit} updateAccBalance={this.updateAccBalance} />)
 
     // Important: Include the "basename" in Router, which is needed for deploying the React app to GitHub Pages
     return (
