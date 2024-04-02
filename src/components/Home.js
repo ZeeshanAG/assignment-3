@@ -10,21 +10,15 @@ import {Link} from 'react-router-dom';
 class Home extends Component {
   render() {
     return (
-      <div>
-        <img src="https://picsum.photos/200/200" alt="bank"/>
 
-        <h1>Bank of React</h1>
-
-        <Link to="/userProfile">User Profile</Link>
-        <br/>
-        <Link to="/login">Login</Link>
-        <br/>
-        <Link to="/credits">Credits</Link>
-        <br/>
-        <Link to="/debits">Debits</Link>
-        <br/><br/>
+      <nav>
+        <Link to="/userProfile" style={{ padding: '10px' }}>User Profile</Link>
+        <Link to="/login" style={{ padding: '10px' }}>Login</Link>
+        <Link to="/credits" style={{ padding: '10px' }}>Credits</Link>
+        <Link to="/debits" style={{ padding: '10px' }}>Debits</Link>
         <AccountBalance accountBalance={this.props.accountBalance}/>
-      </div>
+      </nav>
+      
     );
   }
 }

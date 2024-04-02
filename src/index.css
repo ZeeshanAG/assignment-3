@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-color:	#fff0f5;
 }
 
 code {
@@ -16,3 +17,4 @@ code {
 input, button {
 	margin: 5px;
 }
+
