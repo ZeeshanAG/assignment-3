@@ -11,14 +11,21 @@ class Home extends Component {
   render() {
     return (
 
-      <nav>
-        <Link to="/userProfile" style={{ padding: '10px' }}>User Profile</Link>
-        <Link to="/login" style={{ padding: '10px' }}>Login</Link>
-        <Link to="/credits" style={{ padding: '10px' }}>Credits</Link>
-        <Link to="/debits" style={{ padding: '10px' }}>Debits</Link>
-        <AccountBalance accountBalance={this.props.accountBalance}/>
-      </nav>
-      
+      <div>
+        <h1 style={{ float: 'left',  padding: '10px', color: '#c54c82'}}>National Bank of America</h1>
+        <br></br>
+        <nav style={{ float: 'right' }}>
+          <Link to="/userProfile" style={{ padding: '10px', borderRadius: '5px', backgroundColor: '#E37383', color: '#fff', textDecoration: 'none', marginRight: '10px', border: 'none' }}>User Profile</Link>
+          <Link to="/login" style={{ padding: '10px', borderRadius: '5px', backgroundColor: '#E37383', color: '#fff', textDecoration: 'none', marginRight: '10px', border: 'none' }}>Login</Link>
+          <Link to="/credits" style={{ padding: '10px', borderRadius: '5px', backgroundColor: '#E37383', color: '#fff', textDecoration: 'none', marginRight: '10px', border: 'none' }}>Credits</Link>
+          <Link to="/debits" style={{ padding: '10px', borderRadius: '5px', backgroundColor: '#E37383', color: '#fff', textDecoration: 'none', marginRight: '10px', border: 'none' }}>Debits</Link>
+          <br></br>
+          {/* <AccountBalance accountBalance={this.props.accountBalance}/> */}
+        </nav>
+        <img src="https://pngimg.com/d/bank_PNG24.png" alt="bank" width="700" height="700"></img>
+      </div>
+
+
     );
   }
 }
