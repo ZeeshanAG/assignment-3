@@ -20,6 +20,7 @@ class Home extends Component {
           <Link to="/credits" style={{ padding: '10px', borderRadius: '5px', backgroundColor: '#E37383', color: '#fff', textDecoration: 'none', marginRight: '10px', border: 'none' }}>Credits</Link>
           <Link to="/debits" style={{ padding: '10px', borderRadius: '5px', backgroundColor: '#E37383', color: '#fff', textDecoration: 'none', marginRight: '10px', border: 'none' }}>Debits</Link>
           <br></br>
+          <br></br>
           <AccountBalance accountBalance={this.props.accountBalance}/>
         </nav>
         <img src="https://pngimg.com/d/bank_PNG24.png" alt="bank" width="700" height="700"></img>
