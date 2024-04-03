@@ -28,8 +28,6 @@ class Home extends Component {
         <p>Track your finances using the <b>National Bank of America </b> to help you achieve your financial and investing goals.</p>
       </div>
       
-
-
     );
   }
 }

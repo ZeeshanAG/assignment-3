@@ -14,12 +14,29 @@ p {
   padding: 20px;
   background-color: pink;
   border: 2px solid pink;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds a shadow */
-  transition: all 0.3s ease; /* Adds animation effect */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+  transition: all 0.3s ease;
 }
 
 p:hover {
-  transform: scale(1.1); /* Adds a scaling effect on hover */
+  transform: scale(1.1);
+}
+
+img {
+  display: block; 
+  margin: 0 auto; 
+  border: 5px solid pink; 
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  animation: pulse 2s infinite alternate; 
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1); 
+  }
 }
 
 code {
