@@ -27,7 +27,7 @@ img {
   margin: 0 auto; 
   border: 5px solid pink; 
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  animation: pulse 2s infinite alternate; 
+  animation: pulse 10s infinite alternate; 
 }
 
 @keyframes pulse {
