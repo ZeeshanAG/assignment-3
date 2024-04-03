@@ -23,8 +23,11 @@ class Home extends Component {
           <br></br>
           <AccountBalance accountBalance={this.props.accountBalance}/>
         </nav>
-        <img src="https://pngimg.com/d/bank_PNG24.png" alt="bank" width="700" height="700"></img>
+        <br></br>
+        <img src="https://pngimg.com/d/bank_PNG24.png" alt="bank" width="600" height="600"></img>
+        <p>Track your finances using the <b>National Bank of America </b> to help you achieve your financial and investing goals.</p>
       </div>
+      
 
 
     );
