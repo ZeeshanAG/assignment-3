@@ -24,7 +24,7 @@ class Home extends Component {
           <AccountBalance accountBalance={this.props.accountBalance}/>
         </nav>
         <br></br>
-        <img src="https://pngimg.com/d/bank_PNG24.png" alt="bank" width="600" height="600"></img>
+        <img src="https://www.thebalancemoney.com/thmb/AjRuogEtMjNUtITgfEZeCir8PqE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/wallstreet-be6e21ad26e546dd8b015d7be5d71528.jpg" alt="bank" width="600" height="600"></img>
         <p>Track your finances using the <b>National Bank of America </b> to help you achieve your financial and investing goals.</p>
       </div>
       
