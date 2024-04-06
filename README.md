@@ -1,5 +1,6 @@
 # bank-of-react-starter-code
-This repository is the starter code for Assignment 3 - Bank of React.
+This repository is the code for Assignment 3 - Bank of React.
+Group member names: Sumayia Rashid, Tamanna Chowdhury, and Zeeshan Ahmed Gondal.
 
 ### Live Link 
 [Website link](https://johnnylaicode.github.io/bank-of-react-starter-code/)
