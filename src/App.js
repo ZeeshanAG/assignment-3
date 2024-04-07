@@ -32,16 +32,19 @@ class App extends Component {
     };
   }
 
+  // Set the new account balance
   updateAccBalance = (newBalance) => {
     this.setState({ accountBalance: newBalance });
   };
 
+  //Update the state of debit
   addDebit = (newDebit) => {
     this.setState((prevState) => ({
       debitList: [...prevState.debitList, newDebit],
     }));
   };
 
+  //Update the state of credit
   addCredit = (newCredit) => {
     this.setState((prevState) => ({
       creditList: [...prevState.creditList, newCredit],
